@@ -1,59 +1,48 @@
 require_relative 'Item'
+require_relative 'functions'
 
-class GildedRose
 
-    def initialize(items)
-      @items = items
+item1 = Item.new("Aged Brie", 10, 20)
+item2 = Item.new("Queso", 10, 20)
+item3 = Item.new("Queso", 10, 20)
+item4 = Item.new("Queso", 10, 20)
+
+items = Functions.new(item1)
+
+#producto normalname
+def updateItems(items)
+    if items.item.quality == 50
+        return
     end
-  
-    def update_quality()
-      @items.each do |item|
-        if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert"
-          if item.quality > 0
-            if item.name != "Sulfuras, Hand of Ragnaros"
-              item.quality = item.quality - 1
-            end
-          end
+
+    
+    if(items.item.name == "Aged Brie")
+        (items.item.sell_in == 0) ? items.expired? : items.AgedBrie?
+    elsif (items.item.name == "Backstage passes to a TAFKAL80ETC concert")
+        if(items.item.sell_in == 0)
+            items.equalZero?
+        elsif items.item.sell_in < 6
+            items.lessThanSix?
         else
-          if item.quality < 50
-            item.quality = item.quality + 1
-            if item.name == "Backstage passes to a TAFKAL80ETC concert"
-              if item.sell_in < 11
-                if item.quality < 50
-                  item.quality = item.quality + 2
-                end
-              end
-              if item.sell_in < 6
-                if item.quality < 50
-                  item.quality = item.quality + 3
-                end 
-              end
-              if item.sell_in == 0
-                item.quality = 0
-              end
-            end
-          end
+            items.lessThanEleven?
         end
-        if item.name != "Sulfuras, Hand of Ragnaros"
-          item.sell_in = item.sell_in - 1
-        end
-        if item.sell_in < 0
-          if item.name != "Aged Brie"
-            if item.name != "Backstage passes to a TAFKAL80ETC concert"
-              if item.quality > 0
-                if item.name != "Sulfuras, Hand of Ragnaros"
-                  item.quality = item.quality - 1
-                end
-              end
-            else
-              item.quality = item.quality - item.quality
-            end
-          else
-            if item.quality < 50
-              item.quality = item.quality + 1
-            end
-          end
-        end
-      end
+    elsif(items.item.name == "Sulfuras")
+        items.sulfuras?
+    else
+        if items.item.quality >0 && items.qualityLimit? == true
+            items.decrementQuality
+        end 
     end
-  end
+    puts "\t#{items.item.to_s()}"
+
+end
+
+def print_items(days, items)
+    (0..days).each do |day|
+        puts "Items in day #{day}"
+        updateItems(items)
+        puts ""
+    end
+end
+
+print_items(20, items)
