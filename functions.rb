@@ -6,10 +6,6 @@ class Functions
         @item = item
     end
 
-    def AgedBrie?
-        item.quality += 1
-    end
-
     def lessThanEleven?
         if item.quality < 50
            item.quality += 2
@@ -24,7 +20,7 @@ class Functions
         end
     end
 
-    def equalZero?
+    def setZero
         item.quality = 0    
     end
 
@@ -45,7 +41,12 @@ class Functions
         item.quality = item.quality
     end
 
-    def expired?
+    def incrementDouble
         item.quality += 2
     end
+
+    def decrementDouble
+        item.quality -= 2
+    end 
+
 end

@@ -47,7 +47,7 @@
     <div class="file-time">
       <span class="committed-at">
         
-          Updated <time class='js-timeago' datetime='2021-12-07 18:08:10 -0600'>2021-12-07 18:08:10 -0600</time>
+          Updated <time class='js-timeago' datetime='2021-12-08 18:29:00 -0600'>2021-12-08 18:29:00 -0600</time>
         
       </span>
     </div>
@@ -68,12 +68,12 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">51</span><small> lines of codes</small></div>
+              <div><span class="metric">52</span><small> lines of codes</small></div>
               <div><span class="metric">10</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
               <div><span class="metric">3.6</span><small> complexity/method</small></div>
-              <div><span class="metric">1</span><small> churn</small></div>
+              <div><span class="metric">2</span><small> churn</small></div>
             </div>
             <div class="col-md-3">
               <div><span class="metric">36.34</span><small> complexity</small></div>
@@ -88,7 +88,7 @@
             <li><a href="#" id="toggle-code" class="toggle-button button">code</a></li>
             <li class="active">
               <a href="#" id="toggle-smells" class="toggle-button button">
-                11
+                12
                 smells
               </a>
             </li>
@@ -105,25 +105,21 @@ class Functions<ol class="nocode errors smells">  <li>    <div class="descriptio
         @item = item
     end
 
-    def AgedBrie?<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Method-Name.md" target="_blank"><b>UncommunicativeMethodName</b></a>        </span>      </div>      <span>Functions#AgedBrie? has the name 'AgedBrie?'</span>          </div>  </li></ol>
-        item.quality += 1
-    end
-
     def lessThanEleven?<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Method-Name.md" target="_blank"><b>UncommunicativeMethodName</b></a>        </span>      </div>      <span>Functions#lessThanEleven? has the name 'lessThanEleven?'</span>          </div>  </li></ol>
-        if item.quality &lt; 50<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>Functions#lessThanEleven? calls 'item.quality' 2 times</span>              <span>Locations:</span>                  <a href="functions.html#L14" class="js-smell-location">0</a>                  <a href="functions.html#L15" class="js-smell-location">1</a>                  </div>  </li></ol>
-           item.quality += 2<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>Functions#lessThanEleven? calls 'item.quality' 2 times</span>              <span>Locations:</span>                  <a href="functions.html#L14" class="js-smell-location">0</a>                  <a href="functions.html#L15" class="js-smell-location">1</a>                  </div>  </li></ol>
+        if item.quality &lt; 50<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>Functions#lessThanEleven? calls 'item.quality' 2 times</span>              <span>Locations:</span>                  <a href="functions.html#L10" class="js-smell-location">0</a>                  <a href="functions.html#L11" class="js-smell-location">1</a>                  </div>  </li></ol>
+           item.quality += 2<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>Functions#lessThanEleven? calls 'item.quality' 2 times</span>              <span>Locations:</span>                  <a href="functions.html#L10" class="js-smell-location">0</a>                  <a href="functions.html#L11" class="js-smell-location">1</a>                  </div>  </li></ol>
         end
     end
 
     def lessThanSix?()<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Method-Name.md" target="_blank"><b>UncommunicativeMethodName</b></a>        </span>      </div>      <span>Functions#lessThanSix? has the name 'lessThanSix?'</span>          </div>  </li></ol>
         if item.sell_in &lt; 6
-            if item.quality &lt; 50<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>Functions#lessThanSix? calls 'item.quality' 2 times</span>              <span>Locations:</span>                  <a href="functions.html#L21" class="js-smell-location">0</a>                  <a href="functions.html#L22" class="js-smell-location">1</a>                  </div>  </li></ol>
-              item.quality+= 3<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>Functions#lessThanSix? calls 'item.quality' 2 times</span>              <span>Locations:</span>                  <a href="functions.html#L21" class="js-smell-location">0</a>                  <a href="functions.html#L22" class="js-smell-location">1</a>                  </div>  </li></ol>
+            if item.quality &lt; 50<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>Functions#lessThanSix? calls 'item.quality' 2 times</span>              <span>Locations:</span>                  <a href="functions.html#L17" class="js-smell-location">0</a>                  <a href="functions.html#L18" class="js-smell-location">1</a>                  </div>  </li></ol>
+              item.quality+= 3<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md" target="_blank"><b>DuplicateMethodCall</b></a>        </span>      </div>      <span>Functions#lessThanSix? calls 'item.quality' 2 times</span>              <span>Locations:</span>                  <a href="functions.html#L17" class="js-smell-location">0</a>                  <a href="functions.html#L18" class="js-smell-location">1</a>                  </div>  </li></ol>
             end
         end
     end
 
-    def equalZero?<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Method-Name.md" target="_blank"><b>UncommunicativeMethodName</b></a>        </span>      </div>      <span>Functions#equalZero? has the name 'equalZero?'</span>          </div>  </li></ol>
+    def setZero<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Method-Name.md" target="_blank"><b>UncommunicativeMethodName</b></a>        </span>      </div>      <span>Functions#setZero has the name 'setZero'</span>          </div>  </li></ol>
         item.quality = 0    
     end
 
@@ -144,9 +140,14 @@ class Functions<ol class="nocode errors smells">  <li>    <div class="descriptio
         item.quality = item.quality
     end
 
-    def expired?
+    def incrementDouble<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Method-Name.md" target="_blank"><b>UncommunicativeMethodName</b></a>        </span>      </div>      <span>Functions#incrementDouble has the name 'incrementDouble'</span>          </div>  </li></ol>
         item.quality += 2
     end
+
+    def decrementDouble<ol class="nocode errors smells">  <li>    <div class="description">      <div class="heading">        <span>          <i class="fa fa-warning" aria-hidden="true"></i>          <a href="https://github.com/troessner/reek/blob/master/docs/Uncommunicative-Method-Name.md" target="_blank"><b>UncommunicativeMethodName</b></a>        </span>      </div>      <span>Functions#decrementDouble has the name 'decrementDouble'</span>          </div>  </li></ol>
+        item.quality -= 2
+    end 
+
 end
 </code>
   </div>

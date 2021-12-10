@@ -2,7 +2,7 @@ require_relative 'Item'
 require_relative 'functions'
 
 
-item1 = Item.new("Aged Brie", 10, 20)
+item1 = Item.new("Queso", 10, 20)
 item2 = Item.new("Queso", 10, 20)
 item3 = Item.new("Queso", 10, 20)
 item4 = Item.new("Queso", 10, 20)
@@ -17,10 +17,10 @@ def updateItems(items)
 
     
     if(items.item.name == "Aged Brie")
-        (items.item.sell_in == 0) ? items.expired? : items.AgedBrie?
+        (items.item.sell_in == 0) ? items.incrementDouble : items.incrementQuality
     elsif (items.item.name == "Backstage passes to a TAFKAL80ETC concert")
         if(items.item.sell_in == 0)
-            items.equalZero?
+            items.setZero
         elsif items.item.sell_in < 6
             items.lessThanSix?
         else
@@ -28,6 +28,8 @@ def updateItems(items)
         end
     elsif(items.item.name == "Sulfuras")
         items.sulfuras?
+    elsif (items.item.name == "Conjurados")
+        items.decrementDouble
     else
         if items.item.quality >0 && items.qualityLimit? == true
             items.decrementQuality
